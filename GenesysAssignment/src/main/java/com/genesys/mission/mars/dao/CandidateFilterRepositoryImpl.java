@@ -18,7 +18,7 @@ import com.genesys.mission.mars.model.FilterCondition;
 import com.genesys.mission.mars.model.MarsMissionCandidate;
 
 /**
- * Repository Class which 
+ * Repository Class which builds Criteria having multiple properties.
  * @author Diwahar
  *
  */
@@ -35,6 +35,7 @@ public class CandidateFilterRepositoryImpl implements CandidateFilterRepository 
 		final List<Criteria> criteria = new ArrayList<Criteria>();
 
 		for (Filter filter : filterCondition.getFilters()) {
+			logger.info("Filter - " + filter);
 			addCriteria(criteria, filter);
 		}
 

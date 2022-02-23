@@ -11,6 +11,11 @@ import com.genesys.mission.mars.dao.CandidateFilterRepository;
 import com.genesys.mission.mars.model.FilterCondition;
 import com.genesys.mission.mars.model.MarsMissionCandidate;
 
+/**
+ * Service Class for Filter Services
+ * @author Diwahar
+ *
+ */
 @Service
 public class CandidateFilterService {
 	
@@ -19,6 +24,11 @@ public class CandidateFilterService {
 	@Autowired
 	CandidateFilterRepository candidateFilterRepository;
 	
+	/**
+	 * 
+	 * @param filterCondition
+	 * @return
+	 */
 	public List<MarsMissionCandidate> filterCandidate(FilterCondition filterCondition) {
 		return candidateFilterRepository.findCandidateByFilterProperties(filterCondition);
 	}
